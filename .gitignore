@@ -1,0 +1,23 @@
+# スクレイピング出力（個人情報を含む可能性があるため除外）
+target_list.csv
+result_log.csv
+target_test*.csv
+
+# スクリーンショット
+screenshots/
+*.png
+
+# Streamlit シークレット（パスワード等を含む）
+.streamlit/secrets.toml
+
+# Python キャッシュ
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+
+# 開発用テストファイル
+auto_sender*.py
+scraper*.py
+debug_*.py
+streamlit_log.txt
