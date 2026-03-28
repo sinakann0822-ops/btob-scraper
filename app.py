@@ -39,8 +39,7 @@ _ensure_chromium()
 
 # ─── 設定 ────────────────────────────────────────────────────────────────────
 
-DEFAULT_PASSWORD = "sales2024"
-APP_TITLE        = "BtoB営業リスト自動抽出ツール"
+APP_TITLE = "BtoB営業リスト自動抽出ツール"
 
 SCROLL_TIMES   = 8
 PAGE_SLEEP_MIN = 1.5
@@ -58,7 +57,8 @@ def get_password() -> str:
     try:
         return st.secrets["APP_PASSWORD"]
     except Exception:
-        return DEFAULT_PASSWORD
+        st.error("パスワードが設定されていません。管理者に連絡してください。")
+        st.stop()
 
 
 # ─── データクラス ─────────────────────────────────────────────────────────────
